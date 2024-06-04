@@ -89,7 +89,7 @@ app.use((err, req, res, next) => {
   if (err instanceof multer.MulterError) {
     // A Multer error occurred when uploading.
     if (err.code === 'LIMIT_FILE_SIZE') {
-      res.status(400).json({ message: 'File size too large. Limit 90 mb' });
+      res.status(400).json({ message: 'File size too large. Limit 50 mb' });
     } else {
       res.status(500).send('An unexpected error occurred');
     };
